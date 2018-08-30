@@ -1,3 +1,15 @@
+# stminsights 0.2.2
+
+## Update Dependencies
+
+* updated package dependencies to fix installation errors
+
+# stminsights 0.2.1
+
+## Bug Fix
+
+* fixed a bug for storing topic labels in a spreadsheet
+* increased the number of documents for inspecting topics
 
 
 # stminsights 0.2.0

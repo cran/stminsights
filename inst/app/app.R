@@ -9,6 +9,7 @@ library(ggplot2)
 library(ggrepel)
 library(tibble)
 library(dplyr)
+library(readr)
 
 
 
@@ -1165,8 +1166,8 @@ server <- function(input, output, session) {
 
       findThoughts(
         model(),
-        n = 50,
-        # set to 50
+        n = 100,
+        # set to 100
         topics = c(t),
         texts = stm_data()$out$meta[[input$doccol]]
       )
@@ -1174,8 +1175,8 @@ server <- function(input, output, session) {
     })
 
 
-    topicThoughts <- thoughts()$docs[[1]][1:50]
-    thoughtdf <- data.frame(topicThoughts, stringsAsFactors = F)
+    topicThoughts <- thoughts()$docs[[1]][1:100]
+    thoughtdf <- data.frame(topicThoughts, stringsAsFactors = FALSE)
     names(thoughtdf) <- " "
 
     return(thoughtdf)
@@ -1745,10 +1746,10 @@ server <- function(input, output, session) {
 
   output$downloadLabels <- downloadHandler(
     filename = function() {
-      'stmInsights_topiclabels.csv'
+      'stmInsights_topiclabels.tsv'
     },
     content = function(file) {
-      write_csv(labelframe(), file)
+      readr::write_tsv(labelframe(), file)
 
     }
   )

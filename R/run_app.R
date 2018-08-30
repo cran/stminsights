@@ -1,4 +1,4 @@
-#' #' @title launch the stminsights shiny app
+#' @title launch the stminsights shiny app
 #' @name run_stminsights
 #' @description
 #' \code{run_stminsights} launches the app to analyze Structural Topic models.
@@ -7,6 +7,8 @@
 #' @param use_browser Choose whether you want to launch the shiny app in your browser.
 #' Defaults to \code{TRUE}.
 #' @examples
+#'
+#'  \dontrun{
 #'
 #' library(stm)
 #' library(quanteda)
@@ -49,6 +51,7 @@
 #'   run_stminsights()
 #' }
 #'
+#' }
 #'
 #' @import stm
 #' @import tidygraph

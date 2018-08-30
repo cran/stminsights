@@ -282,7 +282,7 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 
 <div id="a-shiny-application-for-inspecting-structural-topic-models" class="section level2">
 <h2>A Shiny Application for Inspecting Structural Topic Models</h2>
-<p>Topic models are widely used statistical models to reduce the dimensionality of textual data. Although the approach is quantitative in nature, model selection and validation of topic model results can be quite labor intensive, as it requires qualitative inspection of many documents and terms. This is were stminsights comes in: the package enables interactive validation, interpretation and visualization of one or several <a href="http://structuraltopicmodel.com">Structural Topic Models</a> (stm). In case you are not familiar with stm, the stm package vignette is an excellent starting point.</p>
+<p>Topic models are widely used statistical models for reducing the dimensionality of textual data. Although the approach is quantitative in nature, model selection and validation of topic model results can be quite labor intensive, as it requires qualitative inspection of many documents and terms. This is were stminsights comes in: the package enables interactive validation, interpretation and visualization of one or several <a href="http://structuraltopicmodel.com">Structural Topic Models</a> (stm). In case you are not familiar with structural topic models, the stm package vignette is an excellent starting point.</p>
 </div>
 <div id="how-to-install" class="section level2">
 <h2>How to Install</h2>
@@ -300,7 +300,7 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 <li>one or several <code>estimateEffect</code> objects.</li>
 <li>an object <code>out</code> which was used to fit your stm models and contains documents, vocabulary and metadata.</li>
 </ul>
-<p>As an example, the following code uses the <a href="https://quanteda.io/">quanteda</a> package to prepare the gadarian corpus for structural topic modeling. Afterwars, two models and estimates effects are computed and all objects required for stminsights are stored in <code>stm_gadarian.RData</code>:</p>
+<p>As an example, the following code uses the <a href="https://quanteda.io/">quanteda</a> package to prepare the gadarian corpus for structural topic modeling. Afterwards, two models and estimates effects are computed and all objects required for stminsights are stored in <code>stm_gadarian.RData</code>:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">library</span>(stm)</a>
 <a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">library</span>(quanteda)</a>
 <a class="sourceLine" id="cb1-3" data-line-number="3"></a>
@@ -340,7 +340,7 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 <ul>
 <li><p>Info &amp; Topics:</p>
 <ul>
-<li>load the <code>.RData</code> file and select models as well as effect estimates</li>
+<li>load the <code>.RData</code> file, select models and as effect estimates</li>
 <li>inspect the most important terms and documents for topics</li>
 <li>assign labels to topics</li>
 </ul></li>
@@ -361,7 +361,7 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 </ul></li>
 <li><p>Misc:</p>
 <ul>
-<li>export of information about the select model in spreadsheet format</li>
+<li>export information about the select model in spreadsheet format</li>
 <li>calculate diagnostics for evaluating all models in the <code>.RData</code></li>
 <li>export diagnostic plots</li>
 </ul></li>
@@ -372,7 +372,7 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 <p>Although the shiny application includes several options for exporting and visualizing the output from structural topic models, users may wish to create their own plots in different formats. For such cases stminsights offers three utility functions that can be used outside of the shiny application:</p>
 <ul>
 <li><code>get_effects()</code>: create a dataframe including prevalence effects for one stm model</li>
-<li><code>get_network()</code>: create a <a href="https://github.com/thomasp85/tidygraph">tidygraph</a> for a correlation network of one stm model</li>
+<li><code>get_network()</code>: create a <a href="https://github.com/thomasp85/tidygraph">tidygraph</a> for a correlation network of stm topics</li>
 <li><code>get_diag()</code>: create a dataframe including statistical diagnostics for several models</li>
 </ul>
 </div>

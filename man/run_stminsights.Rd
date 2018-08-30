@@ -2,7 +2,7 @@
 % Please edit documentation in R/run_app.R
 \name{run_stminsights}
 \alias{run_stminsights}
-\title{#' @title launch the stminsights shiny app}
+\title{launch the stminsights shiny app}
 \usage{
 run_stminsights(use_browser = TRUE)
 }
@@ -15,6 +15,8 @@ Defaults to \code{TRUE}.}
 It requires an .RData file with stm objects as illustrated in the example below.
 }
 \examples{
+
+ \dontrun{
 
 library(stm)
 library(quanteda)
@@ -57,5 +59,6 @@ if(interactive()){
   run_stminsights()
 }
 
+}
 
 }

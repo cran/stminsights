@@ -7,20 +7,22 @@
 Status](https://travis-ci.org/methodds/stminsights.svg?branch=master)](https://travis-ci.org/methodds/stminsights)
 [![AppVeyor Build
 Status](https://ci.appveyor.com/api/projects/status/github/methodds/stminsights?branch=master&svg=true)](https://ci.appveyor.com/project/methodds/stminsights)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/stminsights)](https://cran.r-project.org/package=stminsights)
+[![CRAN
+downloads](https://cranlogs.r-pkg.org/badges/grand-total/stminsights)](https://cran.rstudio.com/web/packages/stminsights/index.html)
 
-<img src="man/figures/stminsights_interface.png" width="800">
+<img src="man/figures/logo.png" width="800">
 
 ## A Shiny Application for Structural Topic Models
 
 This app enables interactive validation, interpretation and
 visualisation of [Structural Topic
-Models](http://structuraltopicmodel.com) (STM). In case you are not
-familiar with STM, the [package
+Models](http://structuraltopicmodel.com) (STM). Stminsights is focused
+on making your life easier after fitting your STM models. In case you
+are not familiar with STM, the [package
 vignette](https://cran.r-project.org/web/packages/stm/vignettes/stmVignette.pdf)
-is an excellent starting point. In contrast to
-[stmgui](https://cran.r-project.org/web/packages/stmgui/index.html),
-which also allows to preprocess text data and fit models, stminsights is
-focused more on making your life easier after these steps.
+is an excellent starting point.
 
 ## How to Install
 
@@ -44,9 +46,11 @@ library(stminsights)
 run_stminsights()
 ```
 
-You can then upload a `.RData` file which should include: - one or
-several `stm` objects. - one or several `estimateEffect` objects. - an
-object `out` which was used to fit your stm models.
+You can then upload a `.RData` file which should include:
+
+  - one or several `stm` objects.
+  - one or several `estimateEffect` objects.
+  - an object `out` which was used to fit your stm models.
 
 As an example, the following code fits two models and estimates effects
 for the [Political Blog
@@ -85,8 +89,8 @@ After launching stminsights and uploading the file, all objects are
 automatically imported and you can select which models and effect
 estimates to analyze.
 
-In addition to the shiny app, several helper functions are available
-(e.g. `get_effects()` for storing effect estimates in a tidy dataframe).
+In addition to the shiny app, several helper functions are available,
+e.g. `get_effects()` for storing effect estimates in a tidy dataframe.
 
 ## How to Deploy on Shiny Server
 
@@ -101,12 +105,12 @@ and upload it at www.polsoz.uni-bamberg.de/stminsights.
 
 ## Citation
 
-If you use stminsights for your publications please consider citing
-it:
+Please cite stminsights if you use it for your
+publications:
 
 ``` 
   Carsten Schwemmer (2018). stminsights: A Shiny Application for Inspecting
-  Structural Topic Models. R package version 0.2.0.
+  Structural Topic Models. R package version 0.2.2.
   https://github.com/methodds/stminsights
 ```
 
@@ -117,7 +121,7 @@ A BibTeX entry for LaTeX users is:
     title = {stminsights: A Shiny Application for Inspecting Structural Topic Models},
     author = {Carsten Schwemmer},
     year = {2018},
-    note = {R package version 0.2.0},
+    note = {R package version 0.2.2},
     url = {https://github.com/methodds/stminsights},
   }
 ```
