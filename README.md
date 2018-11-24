@@ -27,7 +27,7 @@ is an excellent starting point.
 ## How to Install
 
 You can download and install the latest development version of the app
-by running `devtools::install_github('methodds/stminsights')`.
+by running `devtools::install_github('cschwem2er/stminsights')`.
 
 For Windows users installing from github requires proper setup of
 [Rtools](https://cran.r-project.org/bin/windows/Rtools/), for which a
@@ -98,11 +98,6 @@ Deploying stminsights to your own shiny server is simple: Place the file
 `app.R`, which is located at `inst/app` of this package, to a folder in
 your server directory and you should be good to go.
 
-To test stminsights on my server, you can download
-`stm_poliblog5k.RData`
-[here](http://polsoz.uni-bamberg.de:1337/data/poliblog/stm_poliblog5k.RData)
-and upload it at www.polsoz.uni-bamberg.de/stminsights.
-
 ## Citation
 
 Please cite stminsights if you use it for your
@@ -110,8 +105,8 @@ publications:
 
 ``` 
   Carsten Schwemmer (2018). stminsights: A Shiny Application for Inspecting
-  Structural Topic Models. R package version 0.2.2.
-  https://github.com/methodds/stminsights
+  Structural Topic Models. R package version 0.3.0.
+  https://github.com/cschwem2er/stminsights
 ```
 
 A BibTeX entry for LaTeX users is:
@@ -121,7 +116,7 @@ A BibTeX entry for LaTeX users is:
     title = {stminsights: A Shiny Application for Inspecting Structural Topic Models},
     author = {Carsten Schwemmer},
     year = {2018},
-    note = {R package version 0.2.2},
-    url = {https://github.com/methodds/stminsights},
+    note = {R package version 0.3.0},
+    url = {https://github.com/cschwem2er/stminsights},
   }
 ```

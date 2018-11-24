@@ -22,7 +22,7 @@ Topic models are widely used statistical models for reducing the dimensionality 
 
 Stminsights can be installed from CRAN by running ``install.packages('stminsights')``.
 
-You can also download the latest development version of the app by running ``devtools::install_github('methodds/stminsights')``.    
+You can also download the latest development version of the app by running ``devtools::install_github('cschwem2er/stminsights')``.    
 
 For Windows users installing from github requires proper setup of [Rtools](https://cran.r-project.org/bin/windows/Rtools/), for which a tutorial is available [here](https://github.com/stan-dev/rstan/wiki/Install-Rtools-for-Windows).
 
@@ -82,7 +82,7 @@ run_stminsights()
 
 <img src="../man/figures/logo.png" width="800">
 
-Hovering over UI elements displays tooltips that assist users in navigating through the application. Stminsights is organized as a dashboard with five columns that serve different purposes:
+Hovering over UI elements displays tooltips that assist users in navigating through the application. Stminsights is organized as a dashboard with multiple columns that serve different purposes:
 
 
 - Info & Topics: 
@@ -91,10 +91,16 @@ Hovering over UI elements displays tooltips that assist users in navigating thro
     - inspect the most important terms and documents for topics
     - assign labels to topics
     
-- Proportions: 
+- Proportions (corpus): 
 
     - show proportions for each topic
     - export proportion plots
+    
+- Proportions (documents): 
+
+    - show topic proportions for each document
+    - export document topic proportion plots
+    - visualize and inspect document topic proportions interactively
     
 - Plots: 
 
