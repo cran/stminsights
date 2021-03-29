@@ -4,35 +4,34 @@
 # stminsights
 
 [![Travis-CI Build
-Status](https://travis-ci.org/methodds/stminsights.svg?branch=master)](https://travis-ci.org/methodds/stminsights)
+Status](https://travis-ci.org/cschwem2er/stminsights.svg?branch=master)](https://travis-ci.org/cschwem2er/stminsights)
 [![AppVeyor Build
-Status](https://ci.appveyor.com/api/projects/status/github/methodds/stminsights?branch=master&svg=true)](https://ci.appveyor.com/project/methodds/stminsights)
+Status](https://ci.appveyor.com/api/projects/status/github/cschwem2er/stminsights?branch=master&svg=true)](https://ci.appveyor.com/project/cschwem2er/stminsights)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/stminsights)](https://cran.r-project.org/package=stminsights)
 [![CRAN
-downloads](https://cranlogs.r-pkg.org/badges/grand-total/stminsights)](https://cran.rstudio.com/web/packages/stminsights/index.html)
+downloads](https://cranlogs.r-pkg.org/badges/grand-total/stminsights)](https://cran.r-project.org/package=stminsights)
 
 <img src="man/figures/logo.png" width="800">
 
 ## A Shiny Application for Structural Topic Models
 
 This app enables interactive validation, interpretation and
-visualisation of [Structural Topic
-Models](http://structuraltopicmodel.com) (STM). Stminsights is focused
-on making your life easier after fitting your STM models. In case you
-are not familiar with STM, the [package
-vignette](https://cran.r-project.org/web/packages/stm/vignettes/stmVignette.pdf)
-is an excellent starting point.
+visualization of [Structural Topic
+Models](https://www.structuraltopicmodel.com/) (STM). Stminsights is
+focused on making your life easier after fitting your STM models. In
+case you are not familiar with the STM
+[package](https://CRAN.R-project.org/package=stm), the corresponding
+vignette is an excellent starting point.
 
 ## How to Install
 
-You can download and install the latest development version of the app
-by running `devtools::install_github('cschwem2er/stminsights')`.
+You can download and install the latest development version of
+stminsights by running
+`devtools::install_github('cschwem2er/stminsights')`.
 
 For Windows users installing from github requires proper setup of
-[Rtools](https://cran.r-project.org/bin/windows/Rtools/), for which a
-tutorial is available
-[here](https://github.com/stan-dev/rstan/wiki/Install-Rtools-for-Windows).
+[Rtools](https://cran.r-project.org/bin/windows/Rtools/).
 
 stminsights can also be installed from CRAN by running
 `install.packages('stminsights')`.
@@ -53,10 +52,8 @@ You can then upload a `.RData` file which should include:
   - an object `out` which was used to fit your stm models.
 
 As an example, the following code fits two models and estimates effects
-for the [Political Blog
-Corpus](http://www.sailing.cs.cmu.edu/main/?page_id=710). Afterwards,
-all objects required for stminsights are stored in
-`stm_poliblog5k.RData`.
+for the Political Blog Corpus. Afterwards, all objects required for
+stminsights are stored in `stm_poliblog5k.RData`.
 
 ``` r
 library(stm)
@@ -90,22 +87,21 @@ automatically imported and you can select which models and effect
 estimates to analyze.
 
 In addition to the shiny app, several helper functions are available,
-e.g. `get_effects()` for storing effect estimates in a tidy dataframe.
+e.g. `get_effects()` for storing effect estimates in a tidy dataframe.
 
 ## How to Deploy on Shiny Server
 
-Deploying stminsights to your own shiny server is simple: Place the file
-`app.R`, which is located at `inst/app` of this package, to a folder in
-your server directory and you should be good to go.
+To deploy stminsights to your own shiny server, place the file `app.R`,
+which is located at `inst/app` of this package, to a folder in your
+server directory and you should be good to go.
 
 ## Citation
 
-Please cite stminsights if you use it for your
-publications:
+Please cite stminsights if you use it for your publications:
 
 ``` 
-  Carsten Schwemmer (2018). stminsights: A Shiny Application for Inspecting
-  Structural Topic Models. R package version 0.3.0.
+  Carsten Schwemmer (2021). stminsights: A Shiny Application for Inspecting
+  Structural Topic Models. R package version 0.4.1.
   https://github.com/cschwem2er/stminsights
 ```
 
@@ -115,8 +111,8 @@ A BibTeX entry for LaTeX users is:
   @Manual{,
     title = {stminsights: A Shiny Application for Inspecting Structural Topic Models},
     author = {Carsten Schwemmer},
-    year = {2018},
-    note = {R package version 0.3.0},
+    year = {2021},
+    note = {R package version 0.4.1},
     url = {https://github.com/cschwem2er/stminsights},
   }
 ```

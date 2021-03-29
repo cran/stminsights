@@ -4,8 +4,16 @@
 \alias{get_effects}
 \title{extract stm effect estimates}
 \usage{
-get_effects(estimates, variable, type, ci = 0.95, moderator = NULL,
-  modval = NULL, cov_val1 = NULL, cov_val2 = NULL)
+get_effects(
+  estimates,
+  variable,
+  type,
+  ci = 0.95,
+  moderator = NULL,
+  modval = NULL,
+  cov_val1 = NULL,
+  cov_val2 = NULL
+)
 }
 \arguments{
 \item{estimates}{The object containing estimates calculated with
@@ -56,6 +64,7 @@ effects <- get_effects(estimates = prep,
 effects \%>\% filter(topic == 3) \%>\%
 ggplot(aes(x = value, y = proportion)) +
  geom_errorbar(aes(ymin = lower, ymax = upper), width = 0.1, size = 1) +
+ geom_point(size = 3) +
  coord_flip() + theme_light() + labs(x = 'Treatment', y = 'Topic Proportion')
 
 

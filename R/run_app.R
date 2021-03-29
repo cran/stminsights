@@ -2,7 +2,7 @@
 #' @name run_stminsights
 #' @description
 #' \code{run_stminsights} launches the app to analyze Structural Topic models.
-#' It requires an .RData file with stm objects as illustrated in the example below.
+#' It requires a .RData file with stm objects as illustrated in the example below.
 #'
 #' @param use_browser Choose whether you want to launch the shiny app in your browser.
 #' Defaults to \code{TRUE}.
@@ -15,9 +15,9 @@
 #'
 #' # prepare data
 #' data <- corpus(gadarian, text_field = 'open.ended.response')
-#' docvars(data)$text <- texts(data)
+#' docvars(data)$text <- as.character(data)
 #' data <- dfm(data, stem = TRUE, remove = stopwords('english'),
-#'             remove_punct = TRUE) %>% dfm_trim(min_count = 2)
+#'             remove_punct = TRUE) %>% dfm_trim(min_termfreq = 2)
 #' out <- convert(data, to = 'stm')
 #'
 #' # fit models and effect estimates
@@ -75,8 +75,9 @@ run_stminsights <- function(use_browser = TRUE) {
   }
 
   if (use_browser == TRUE)
-  runApp(appDir, display.mode = "normal",
-                launch.browser = TRUE)
-  else runApp(appDir, display.mode = "normal")
+    runApp(appDir, display.mode = "normal",
+           launch.browser = TRUE)
+  else
+    runApp(appDir, display.mode = "normal")
 
-  }
+}

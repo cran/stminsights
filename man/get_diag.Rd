@@ -12,7 +12,7 @@ get_diag(models, outobj)
 \item{outobj}{The \code{out} object containing documents for all stm models.}
 }
 \value{
-Returns model diagnostics in a tidy data frame.
+Returns model diagnostics in a data frame.
 }
 \description{
 \code{ get_diag()} is a helper function to compute average and median
@@ -29,7 +29,7 @@ library(quanteda)
 
 # prepare data
 data <- corpus(gadarian, text_field = 'open.ended.response')
-docvars(data)$text <- texts(data)
+docvars(data)$text <- as.character(data)
 data <- dfm(data, stem = TRUE, remove = stopwords('english'),
             remove_punct = TRUE)
 out <- convert(data, to = 'stm')

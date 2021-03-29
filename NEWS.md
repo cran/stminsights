@@ -1,6 +1,37 @@
+# stminsights 0.4.1
+
+## minor improvements and bug fixes
+
+* update dependencies to fix other bugs related to Shiny
+
+# stminsights 0.4.0
+
+## minor improvements and bug fixes
+
+* fixes several bugs introduced by changes in the Shiny package
+* improved error messages for correlation graphs in the interactive app
+* updated documentation, readme and intro vignette
+
+# stminsights 0.3.2
+
+## new feature
+
+* added plot for pointestimate interaction effects
+
+# stminsights 0.3.1
+
+## New features (implemented by Jonne Guyt)
+
+* number of documents to be sampled from can now be set by user
+* a minimum threshold (theta) for topic prevalence can be set by user when displaying relevant documents per topic
+
+## Minor improvements
+
+* visual demarcations to highlight different options/panels
+
 # stminsights 0.3.0
 
-## New features implemented by Jonne Guyt
+## New features (implemented by Jonne Guyt)
 
 * representative documents are now searchable
 * representative document table now contains (optional) information on: row id, STM document ID and theta

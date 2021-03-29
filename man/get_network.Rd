@@ -18,7 +18,7 @@
 Returns tidygraph network of topic correlations.
 }
 \description{
-\code{ get_network()} is a helper function to extract stm topic correlation networks
+\code{ get_network()} is a helper function to extract topic correlation networks
 as tidygraph objects and add labels and topic proportions.
 }
 \examples{
@@ -29,7 +29,7 @@ library(quanteda)
 
 # prepare data
 data <- corpus(gadarian, text_field = 'open.ended.response')
-docvars(data)$text <- texts(data)
+docvars(data)$text <- as.character(data)
 data <- dfm(data, stem = TRUE, remove = stopwords('english'),
             remove_punct = TRUE)
 out <- convert(data, to = 'stm')

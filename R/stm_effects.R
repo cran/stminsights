@@ -45,6 +45,7 @@
 #' effects %>% filter(topic == 3) %>%
 #' ggplot(aes(x = value, y = proportion)) +
 #'  geom_errorbar(aes(ymin = lower, ymax = upper), width = 0.1, size = 1) +
+#'  geom_point(size = 3) +
 #'  coord_flip() + theme_light() + labs(x = 'Treatment', y = 'Topic Proportion')
 #'
 #'
@@ -95,7 +96,6 @@ get_effects <- function(estimates,
                         # cov values for difference
                         cov_val1 = NULL,
                         cov_val2 = NULL) {
-
   data <- plot.estimateEffect(
     x = estimates,
     covariate = variable,
@@ -110,26 +110,26 @@ get_effects <- function(estimates,
 
 
   # catching inconsistent stm naming conventions
-  if(! 'cis' %in% names(data)) {
+  if (!'cis' %in% names(data)) {
     data$cis <- data$ci
   }
 
-  if('x' %in% names(data)) {
+  if ('x' %in% names(data)) {
     data$uvals <- data$x
   }
   names(data$cis) <- data$topics
   names(data$means) <- data$topics
 
   tidy_stm <- data$topics %>% purrr::map(function(top) {
-
     top <- as.character(top)
 
     if (type == 'difference') {
-
-      props <- tibble(difference = data$means[[top]],
-                      topic = top,
-                      lower = data$cis[[top]][[1]],
-                      upper = data$cis[[top]][[2]])
+      props <- tibble(
+        difference = data$means[[top]],
+        topic = top,
+        lower = data$cis[[top]][[1]],
+        upper = data$cis[[top]][[2]]
+      )
     }
 
     else {
@@ -156,4 +156,3 @@ get_effects <- function(estimates,
   }
   return(tidy_stm)
 }
-
