@@ -11,9 +11,13 @@ knitr::opts_chunk$set(
 #  
 #  # prepare data
 #  data <- corpus(gadarian, text_field = 'open.ended.response')
-#  docvars(data)$text <- as.character(data)
-#  data <- dfm(data, stem = TRUE, remove = stopwords('english'),
-#             remove_punct = TRUE) %>% dfm_trim(min_count = 2)
+#   docvars(data)$text <- as.character(data)
+#  
+#  data <- tokens(data, remove_punct = TRUE) |>
+#     tokens_wordstem() |>
+#     tokens_remove(stopwords('english')) |> dfm() |>
+#     dfm_trim(min_termfreq = 2)
+#  
 #  out <- convert(data, to = 'stm')
 #  
 #  # fit models and effect estimates
@@ -36,6 +40,6 @@ knitr::opts_chunk$set(
 #  save.image('stm_gadarian.RData')
 
 ## ---- eval = FALSE------------------------------------------------------------
-#  #library(stminsights)
-#  #run_stminsights()
+#  library(stminsights)
+#  run_stminsights()
 
