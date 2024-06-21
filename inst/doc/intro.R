@@ -5,7 +5,7 @@ knitr::opts_chunk$set(
   eval = FALSE
 )
 
-## ---- eval = FALSE------------------------------------------------------------
+## ----eval = FALSE-------------------------------------------------------------
 #  library(stm)
 #  library(quanteda)
 #  
@@ -39,7 +39,7 @@ knitr::opts_chunk$set(
 #  # save objects in .RData file
 #  save.image('stm_gadarian.RData')
 
-## ---- eval = FALSE------------------------------------------------------------
+## ----eval = FALSE-------------------------------------------------------------
 #  library(stminsights)
 #  run_stminsights()
 
